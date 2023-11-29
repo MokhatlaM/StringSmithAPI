@@ -2,9 +2,11 @@ const mongoose = require("mongoose");
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.DATABASE_URI, {});
+    const STRINGSMITHDB_URI = process.env.DATABASE_URI;
+    await mongoose.connect(STRINGSMITHDB_URI, {});
   } catch (error) {
     console.log("connection error", error);
+    process.exit(1);
   }
 };
 
