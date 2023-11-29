@@ -1,0 +1,2 @@
+# StringSmithAPI
+ Backend(API) - StringsmithUI
