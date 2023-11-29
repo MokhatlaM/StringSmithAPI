@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const WordTypesSchema = new mongoose.Schema({
-  _id: Number,
+  id: Number,
   WordType: String,
 });
 
@@ -16,8 +16,8 @@ const GeneratedHistorySchema = new mongoose.Schema({
   Sentence: String,
 });
 
-const WordType = mongoose.model("wordtypes", WordTypesSchema);
-const Word = mongoose.model("Words", WordsSchema);
+const WordType = mongoose.model("WordType", WordTypesSchema);
+const Word = mongoose.model("Word", WordsSchema);
 const GeneratedHistory = mongoose.model(
   "GeneratedHistory",
   GeneratedHistorySchema
