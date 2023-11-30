@@ -4,13 +4,13 @@ const asyncHandler = require("express-async-handler");
 
 const getWords = asyncHandler(async (req, res) => {
   try {
+    // const wordTypeId = req.params.wordTypeId;
+    // const data = await Words.Word.find({ WordTypeId: wordTypeId });
     const data = await Words.Word.find();
-    if (!data) {
+    if (!data || data.length === 0) {
       return res.status(400).json({ message: "No Words found" });
-      console.log(data);
     }
     res.json(data);
-    console.log("Words retreived");
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }

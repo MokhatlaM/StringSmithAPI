@@ -14,8 +14,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(cors());
-app.use("/api/Words", WordRouter);
 app.use("/api/WordTypes", WordTypeRouter);
+app.use("/api/words", WordRouter);
 
 // app.get("/api/wordtypes", async (req, res) => {
 //   try {

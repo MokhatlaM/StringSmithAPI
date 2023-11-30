@@ -16,8 +16,8 @@ const GeneratedHistorySchema = new mongoose.Schema({
   Sentence: String,
 });
 
-const WordType = mongoose.model("WordType", WordTypesSchema);
-const Word = mongoose.model("Word", WordsSchema);
+const WordType = mongoose.model("WordType", WordsSchema);
+const Word = mongoose.model("Word", WordTypesSchema);
 const GeneratedHistory = mongoose.model(
   "GeneratedHistory",
   GeneratedHistorySchema
